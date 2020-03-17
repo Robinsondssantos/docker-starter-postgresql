@@ -1,4 +1,4 @@
-# Docker starter postgresql
+# PostgreSQL Docker starter
 
 ## Install docker in Ubuntu 19.04 (see how to install in your distro)
 ```
