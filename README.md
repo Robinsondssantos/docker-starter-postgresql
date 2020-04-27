@@ -57,6 +57,7 @@ database_name=#\q
 ```
 *\l list of databases*
 *\dl list of relations*
+*\q quit*
 
 ## Show statistics of postgresql container
 ```
