@@ -55,6 +55,7 @@ postgres=# \connect database_name;
 You are connected to database "database_name" as user "postgres".
 database_name=#\q
 ```
+*\l list all databases*
 
 ## Show statistics of postgresql container
 ```
