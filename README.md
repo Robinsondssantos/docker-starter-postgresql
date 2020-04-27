@@ -42,6 +42,11 @@ user@computer:~$ docker ps -a
 user@computer:~$ docker start <postgresql_container_id>
 ```
 
+## Execute psql command
+```
+user@computer:~$ docker exec -it <postgresql_container_id> psql -U postgres
+```
+
 ## Show statistics of postgresql container
 ```
 user@computer:~$ docker stats <postgresql_container_id>
