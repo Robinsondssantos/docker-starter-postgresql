@@ -47,6 +47,15 @@ user@computer:~$ docker start <postgresql_container_id>
 user@computer:~$ docker exec -it <postgresql_container_id> psql -U postgres
 ```
 
+## Create database (after execute psql command)
+```
+postgres=# CREATE DATABASE database_name;
+CREATE DATABASE
+postgres=# \connect database_name;
+You are connected to database "database_name" as user "postgres".
+database_name=#\q
+```
+
 ## Show statistics of postgresql container
 ```
 user@computer:~$ docker stats <postgresql_container_id>
