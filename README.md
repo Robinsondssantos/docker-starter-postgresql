@@ -74,3 +74,22 @@ user@computer:~$ docker restart <postgresql_container_id>
 user@computer:~$ docker rm <postgresql_container_id>
 ```
 
+## Enable extension unaccent 
+```
+user@computer:~$ docker start postgres-container
+user@computer:~$ docker exec -it postgres-container bash
+user@computer:~$ su - postgres
+psql
+\connect database_name
+You are now connected to database "database_name" as user "postgres".
+database_name=# create extension unaccent;
+CREATE EXTENSION
+database_name=# \dx
+                         List of installed extensions
+   Name   | Version |   Schema   |                 Description                 
+----------+---------+------------+---------------------------------------------
+ plpgsql  | 1.0     | pg_catalog | PL/pgSQL procedural language
+ unaccent | 1.1     | public     | text search dictionary that removes accents
+database_name=# \q
+```
+
