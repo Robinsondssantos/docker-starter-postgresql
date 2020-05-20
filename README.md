@@ -93,3 +93,8 @@ database_name=# \dx
 database_name=# \q
 ```
 
+### Generate backup
+```
+docker exec -i postgres-container pg_dump --username username database_name > /tmp/dump.sql
+```
+
