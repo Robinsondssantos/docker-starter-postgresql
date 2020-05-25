@@ -92,6 +92,24 @@ database_name=# \dx
  unaccent | 1.1     | public     | text search dictionary that removes accents
 database_name=# \q
 ```
+## Enable extension uuid-ossp 
+```
+user@computer:~$ docker start postgres-container
+user@computer:~$ docker exec -it postgres-container bash
+user@computer:~$ su - postgres
+psql
+\connect database_name
+You are now connected to database "database_name" as user "postgres".
+database_name=# create extension "uuid-ossp";
+CREATE EXTENSION
+database_name=# \dx
+                          List of installed extensions
+   Name    | Version |   Schema   |                   Description                   
+-----------+---------+------------+-------------------------------------------------
+ plpgsql   | 1.0     | pg_catalog | PL/pgSQL procedural language
+ uuid-ossp | 1.1     | public     | generate universally unique identifiers (UUIDs)
+database_name=# \q
+```
 
 ## Generate backup
 ```
