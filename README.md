@@ -24,7 +24,7 @@ user@computer:~$ sudo usermod -aG docker $USER
 
 ## Create the postgresql container
 ```
-user@computer:~$ docker run --name database-name -e POSTGRES_PASSWORD=my-secret-password -p 5432:5432 -d postgres
+user@computer:~$ docker run --name database-name -e POSTGRES_PASSWORD=my-secret-password -p 5432:5432 -v /home/user/pg_data/var/lib/postgresql/data:/var/lib/postgresql/data -d postgres
 ```
 
 ## Check if postgresql was running
