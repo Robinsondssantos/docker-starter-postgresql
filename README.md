@@ -116,3 +116,8 @@ database_name=# \q
 docker exec -i postgres-container pg_dump --username username database_name > /tmp/dump.sql
 ```
 
+## Restore backup
+```
+cat /tmp/dump.sql | docker exec -i postgres-container psql -U username
+```
+
